@@ -31,8 +31,8 @@ module "network" {
   vpc_name = "network_vpc"
 }
 
-module "webserver" {
-  source        = "./modules/webserver"
-  subnet_id     = module.network.public_subnet
-  instance_type = var.instance_type
-}
+# module "webserver" {
+#   source        = "./modules/webserver"
+#   subnet_id     = module.network.public_subnet
+#   instance_type = var.instance_type
+# }
