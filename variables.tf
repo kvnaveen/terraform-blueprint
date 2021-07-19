@@ -15,3 +15,8 @@ variable "state_region" {
   description = "State bucket region"
   default     = "ca-central-1"
 }
+
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}

@@ -32,6 +32,7 @@ module "network" {
 }
 
 module "webserver" {
-  source = "./modules/webserver"
-  subnet_id = module.network.public_subnet
+  source        = "./modules/webserver"
+  subnet_id     = module.network.public_subnet
+  instance_type = var.instance_type
 }
