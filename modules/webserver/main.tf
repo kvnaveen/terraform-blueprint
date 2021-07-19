@@ -9,4 +9,7 @@ resource "aws_instance" "webserver" {
   tags = {
     Name = local.instance_name
   }
+  root_block_device {
+    encrypted = true
+  }
 }
