@@ -31,7 +31,7 @@ module "network" {
   vpc_name = "network_vpc"
 }
 
-# module "webserver" {
-#   source = "./modules/webserver"
-#   subnet_id = module.network.public_subnet
-# }
+module "webserver" {
+  source = "./modules/webserver"
+  subnet_id = module.network.public_subnet
+}
