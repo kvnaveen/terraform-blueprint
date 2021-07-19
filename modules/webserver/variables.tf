@@ -1,16 +1,16 @@
 variable "subnet_id" {
-  type = string
+  type        = string
   description = "Network in which webserver is deployed to"
 }
 
 variable "instance_type" {
-  type = string
+  type        = string
   description = "Instance Type"
-  default = "t2.micro"
+  default     = "t2.micro"
 }
 
 variable "ami" {
-  type = string
+  type        = string
   description = "AMIId to be used for webserver"
-  default = "ami-09e67e426f25ce0d7"
+  default     = "ami-0801628222e2e96d6"
 }

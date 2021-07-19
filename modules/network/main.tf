@@ -3,9 +3,10 @@ terraform {
 }
 
 locals {
-  vpc_name = "${terraform.workspace}-${var.vpc_name}"
+  vpc_name    = "${terraform.workspace}-${var.vpc_name}"
   subnet_name = "${terraform.workspace}-Public"
 }
+
 resource "aws_vpc" "Network" {
   cidr_block = var.cidr_block
   tags = {
