@@ -3,7 +3,7 @@ terraform {
 }
 
 locals {
-  vpc_name    = "${terraform.workspace}-${var.vpc_name}"
+  vpc_name    = "default-${var.vpc_name}"
   subnet_name = "${terraform.workspace}-Public"
 }
 
