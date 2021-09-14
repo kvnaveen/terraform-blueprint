@@ -3,8 +3,8 @@ terraform {
 }
 
 locals {
-  vpc_name    = "default-${var.vpc_name}"
-  subnet_name = "${terraform.workspace}-Public"
+  vpc_name    = "blueprint-${var.vpc_name}"
+  subnet_name = "${var.vpc_name}-Public"
 }
 
 resource "aws_vpc" "Network" {
