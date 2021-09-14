@@ -9,17 +9,8 @@ terraform {
       version = "~> 3.0"
     }
   }
-  backend "s3" {}
+  # backend "s3" {}
 }
-
-# data "terraform_remote_state" "state" {
-#   backend = "s3"
-#   config {
-#     bucket = "test-statebucket446e0578-rkokcr4bdu3f"
-#     key = "states/terraform.tfstate"
-#     region = env.AWS_DEFAULT_REGION
-#   }
-# }
 
 # Configure the AWS Provider
 provider "aws" {
@@ -28,7 +19,7 @@ provider "aws" {
 
 module "network" {
   source   = "./modules/network"
-  vpc_name = "network_vpc"
+  vpc_name = var.vpc_name
 }
 
 # module "webserver" {
