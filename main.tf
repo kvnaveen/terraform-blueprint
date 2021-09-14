@@ -1,7 +1,3 @@
-locals {
-  state_bucket = var.state_bucket
-}
-
 terraform {
   required_providers {
     aws = {
