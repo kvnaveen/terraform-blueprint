@@ -8,6 +8,17 @@ terraform {
   backend "s3" {}
 }
 
+provider "aws" {
+  region = "ca-central-1"
+  default_tags {
+    tags = var.tags
+  }
+}
+
+variable "tags" {
+  type = map(string)
+}
+
 module "network" {
   source   = "./modules/network"
   vpc_name = var.vpc_name
